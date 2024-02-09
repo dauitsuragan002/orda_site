@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Example</title>
+    <script src="../../js/playerjs.js" type="text/javascript"></script>
+</head>
+<body>
+    <style>
+        html,body{
+            margin:0;padding:0;width:100%;height:100%;
+        }
+    </style>
+    <div id="player" style="width: 100%; height: 100%;"></div>
+
+    <script type="text/javascript">
+        var playlist = [
+            {"title":"1 - Маусым","folder":[
+                {"title":"1-бөлім","file":"https://clck.ru/38GRVk"},
+                {"title":"2-бөлім","file":"hhttps://clck.ru/38GRVW"},
+                {"title":"3-бөлім","file":"https://clck.ru/38GRVF"},
+                {"title":"4-бөлім","file":"https://clck.ru/38GRUx"},
+                
+          ]},
+        ]
+
+        var player = new Playerjs({
+            id: "player",
+            file: playlist
+        });
+    </script>
+</body>
+</html>

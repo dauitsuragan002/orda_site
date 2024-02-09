@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ORDA STUDIO</title>
+    <link rel="icon" href="icon/ORDA.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>ORDA STUDIO - ұсынады.</h1>
+        <input type="text" id="searchInput" placeholder="Іздеу...">
+        <button onclick="searchVideos()">Видеоны табу</button>
+    </header>
+
+    <div class="content">
+        
+        <!-- Карточка 1 -->
+        <div class="video-card">
+            <img src="https://image.tmdb.org/t/p/original/a3ZJkdvy9UnvjjM5HozrNpaszxQ.jpg">
+            <p>Мылжың</p>
+            <button onclick="playVideo('series1')">Көру</button>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="video-card">
+            <img src="https://image.tmdb.org/t/p/original/3G3wiviawfVEAEtedNsi0VYtcJD.jpg">
+            <p>Өшпенділік</p>
+            <button onclick="playVideo('series2')">Көру</button>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="video-card" >
+            <img src="https://image.tmdb.org/t/p/original/14NZZPm27Oy6zC3mkrbodXU17I8.jpg">
+            <p>Менің атым</p>
+            <button onclick="playVideo('series3')">Көру</button>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="video-card" >
+            <img src="https://image.tmdb.org/t/p/original/o16xqxxkTYxp6VBPp2fhChUpeW1.jpg" alt="Video 4">
+            <p>Зұлымдықтың ең жаманы</p>
+            <button onclick="playVideo('series4')">Көру</button>
+        </div>
+        
+        <!-- Карточка 5 -->
+        <div class="video-card" onclick="playVideo('video5')">
+            <img src="https://image.tmdb.org/t/p/original/vlgfxb0OMDtODDdgaknvFrbaRdf.jpg" alt="Video 5">
+            <p>Жазалаушы</p>
+            <button onclick="playVideo('series5')">Көру</button>
+        </div>
+    
+    <footer class="footer">
+
+        <div class="footer-text">
+            <p>Біз ORDA STUDIO - әуесқой дыбыстама тобымыз</p>
+        </div>
+
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/ordaa_studio/" target="_blank">
+                <i class="fa fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://t.me/studioorda" target="_blank">
+                <i class="fa fa-telegram fa-2x"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ordaa_studio" target="_blank">
+                <i class="fab fa-tiktok fa-2x"></i>
+            </a>
+            <a href="https://vk.com/studioorda" target="_blank">
+                <i class="fa fa-vk fa-2x"></i>
+            </a>
+        </div>
+
+    </footer>
+
+    <div class="modal" id="videoModal">
+        <span class="close" onclick="closeVideoModal()">&times;</span>
+        <iframe id="videoFrame" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function searchVideos() {
+            var searchInputValue = document.getElementById("searchInput").value;
+            if (searchInputValue.trim() !== "") {
+                alert("Вы ищете: " + searchInputValue);
+            } else {
+                alert("Введите текст для поиска");
+            }
+        }
+        
+        function playVideo(seriesName) {
+            var seriale1 = 'series1';
+            var seriale2 = 'series2';
+            var seriale3 = 'series3';
+            var seriale4 = 'series4';
+            var seriale5 = 'series5';
+
+            if (seriesName === seriale1){
+                window.open("serials/мылжың/мылжың.html", "_blank");
+            } else if (seriesName === seriale2){
+                window.open("serials/өшпенділік/өшпенділік.html", "_blank");
+            }
+            else if (seriesName === seriale3){
+                window.open("serials/менің-атым/менің-атым.html", "_blank");
+            }
+            else if (seriesName === seriale4){
+                window.open("serials/зұлымдықтың-ең-жаманы/зұлымдықтың-ең-жаманы.html", "_blank");
+            }
+            else if (seriesName === seriale5){
+                window.open("serials/жазалаушы/жазалаушы.html", "_blank");
+            }
+         }
+    </script>
+</body>
+</html>
